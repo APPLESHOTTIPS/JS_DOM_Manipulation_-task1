@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand"> eventHandling</a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h4 class="text-center"> Change Event</h4>
+                    </div>
+                    <div class="card-body bg-transparent">
+                        <form>
+                            <div class="input-group mb-3 ">
+                                <input id="password" type="password" class="form-control" aria-label="Text input with checkbox">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <input id="checkbox" class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                        <span>Show</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 id="lang-option"></h1>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // let selectBox = document.querySelector("#lang-select");
+        // selectBox.addEventListener("change", () => {
+        //     let selectOption = selectBox.value;
+        //     let lang = document.querySelector("#lang-option");
+        //     lang.innerHTML = selectOption;
+        // });
+
+        let password = document.querySelector('#password');
+        let checkbox = document.querySelector("#checkbox");
+        checkbox.addEventListener("change", () => {
+            let getAttribute = password.getAttribute('type')
+            if (getAttribute === "password") {
+                password.setAttribute('type', 'text');
+            } else {
+                password.setAttribute('type', 'password')
+            }
+
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>
