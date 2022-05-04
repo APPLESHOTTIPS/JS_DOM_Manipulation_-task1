@@ -10,6 +10,6 @@ var x = {
 
 };
 x.color = "red";
-x.woner = "arvind";
+x.woner = "ravine";
 x.tyres = "MRF";
 document.getElementById("demo").innerHTML = "car owner is " + '' + x.tyres;

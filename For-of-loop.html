@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
     <script>
         let Result = "";
@@ -114,6 +114,108 @@
                 break;
         }
         console.log(`today is : ${today}`)
+
+
+
+        let employees = [
+
+            {
+                id: 1,
+                name: 'braving',
+                age: 10,
+                designation: 'software engineer',
+                isActive: true
+            }, {
+                id: 2,
+                name: 'john',
+                age: 20,
+                designation: ' engineer',
+                isActive: true
+            }, {
+                id: 3,
+                name: 'hello',
+                age: 30,
+                designation: 'software ',
+                isActive: true
+            }, {
+                id: 4,
+                name: 'bravo',
+                age: 40,
+                designation: ' sr software engineer',
+                isActive: true
+            },
+        ];
+
+        // let b = "";
+        // for (let a = 0; a <= employees.length; a++); {
+        //     let employee = employees[a];
+        //     b += `${employee.name.toUpperCase()}`;
+
+
+        // }
+        // console.log(b);
+
+
+
+        let a = "";
+
+        for (let index in employees) {
+            let employee = employees[index];
+            if (index <= 2)
+                a += `${employee.age}, `;
+            else {
+                a += `${employee.age} `;
+            }
+        }
+        console.log(a);
+
+
+
+        // for of loop es-6//
+
+
+        a = '';
+        for (employee of employees) {
+
+            a += `${employee.name.toUpperCase()} `;
+
+        }
+        console.log(a);
+
+
+        a = "";
+
+        employees.forEach(employee => {
+
+            a += `${employee.name.toUpperCase()} `;
+
+        })
+
+        console.log(a);
+
+
+        let dog = {
+            name: "ddog",
+            age: 14,
+            place: "place"
+        }
+
+        for (let d in dog) {
+            console.log(d);
+
+        }
+
+        debugger;
+        console.log();
+        c();
+        var D = "A"
+
+        let b = "B";
+        let C = "jdf";
+
+        function c() {
+            console.log("c")
+        }
     </script>
 
 

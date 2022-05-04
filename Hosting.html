@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>HOSTING</title>
+</head>
+
+<body>
+    <script>
+        // let submit = (name) => {
+        //     console.log(`Submit ${name}`);
+        // }
+        // let onSubmit = {
+        //     render: function() {
+        //         this.submit();
+        //     },
+        // };
+
+        // let result = submit.bind(onSubmit, "aravind")
+        // result();
+
+        function init() {
+            var name = 'Mozilla'; // name is a local variable created by init
+            function displayName() { // displayName() is the inner function, a closure
+                alert(name); // use variable declared in the parent function
+            }
+            displayName();
+        }
+        init();
+
+
+
+        let person = {
+            firstName: "arvind",
+            lastName: "Naidu",
+            age: 43,
+            arr: ["a", "b", "b"]
+        }
+
+        function a({
+            firstName,
+            age,
+            arr
+        }) {
+            console.log(`${(firstName)} and ${age} and ${arr} `)
+        }
+        a(person);
+
+        //SPREAD PARAMETERS: OPPOSITE TO REST PARAMETERS//
+        function printPerson(first = "hello", lastName, age) {
+            console.log(first, lastName, age)
+
+        }
+
+        let arr1 = ["ted", "newword", 45]
+
+        printPerson(...arr1);
+
+
+
+        let c = {
+            name: "arvind",
+            number: 66,
+            age: 90
+        };
+        let c1 = {
+            name: "arvind",
+            number: 6,
+            age: 0
+        };
+
+        function hello() {
+            console.log(this.name + '.' + this.age);
+        }
+        let A = hello.bind(c1);
+        A();
+    </script>
+
+
+</body>
+
+</html>

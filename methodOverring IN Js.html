@@ -1,0 +1,225 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>OOPS_CLASS</title>
+</head>
+
+<body>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-danger text-center">
+                        <h1>Register here</h1>
+                    </div>
+                    <div class="card-body">
+                        <form id="register-form">
+                            <div class="form-group">
+                                <input type="text" id="username " class="form-control" placeholder="username" class="form-valid">
+                            </div>
+                            <div class="form-group">
+                                <input id="email" type="email" class="form-control" placeholder="email">
+                            </div>
+                            <div class="form-group">
+                                <input id="password" type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="c_password">
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" value="Register" class="btn btn-secondary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <script>
+        // let Result = "";
+
+        // function msg() {
+        //     let message = "";
+        //     for (let i = 0; i <= 10; i++) {
+        //         message += `${i} `;
+
+        //     };
+        //     return message;
+        // }
+        // Result = msg();
+        // console.log(Result)
+
+        // let time = 18;
+        // let wishMsg = "";
+
+        // if (time <= 12) {
+        //     wishMsg = "GoodMorning"
+        // } else if (time > 12 && time <= 17) {
+        //     wishMsg = 'goodAfternoon'
+        // } else if (time > 17 && time <= 23) {
+        //     wishMsg = 'goodEvening';
+
+        // } else {
+
+        //     wishMsg = 'enter correct time'
+
+        // }
+
+        // console.log(wishMsg)
+
+        // let day = new Date().getDay();
+
+        // let today = '';
+
+        // switch (day) {
+        //     case 0:
+        //         today = "sunday"
+
+        //         break;
+        //     case 1:
+        //         today = "monday"
+
+        //         break;
+        //     case 2:
+        //         today = "tuesday"
+
+        //         break;
+        //     case 3:
+        //         today = "wednesday"
+
+        //         break;
+        //     case 4:
+        //         today = "thursday"
+
+        //         break;
+        //     case 5:
+        //         today = "friday"
+
+        //         break;
+        //     case 6:
+        //         today = "saturday"
+
+        //         break;
+        //     default:
+        //         today = 'Enter proper Day';
+        //         break;
+        // }
+        // console.log(`today is : ${today}`)
+
+
+
+        // let mobile = {
+
+        //     brand: 'apple',
+        //     price: 42000,
+        //     color: "black"
+        // };
+
+        // console.log(mobile)
+
+        // class Mobile {
+        //     constructor(brand, price, color) {
+        //         this.brand = brand;
+        //         this.price = price;
+        //         this.color = color;
+        //     }
+        //     getBrand() {
+        //         return this.brand;
+        //     }
+
+        //     setBrand() {
+        //         return this.brand
+        //     }
+        //     getPrice() {
+        //         return this.price;
+        //     }
+        //     setPrice(price) {
+        //         this.price = price
+        //     }
+        //     getColor() {
+        //         return this.color
+        //     }
+        //     setColor() {
+        //         return this.color
+        //     }
+
+        //     setMobile() {
+        //         let spce = `BRAND :${this.getBrand()}
+        //                     PRICE : ${this.getColor()}
+        //                     COLOR : ${this.getPrice()}          `;
+        //         console.log(spce);
+        //     }
+
+        // }
+
+        // let mobile = new Mobile('apple', 45000, 'red');
+        // mobile.setMobile();
+        // mobile.setPrice(3000);
+        // mobile.setMobile()
+
+
+
+        class Hello {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            getFirstName() {
+                return this.firstName;
+            }
+            getLastName() {
+                return this.lastName;
+            }
+
+            greet() {
+
+                let msg = `PersonName : ${this.getFirstName()} ${this.getLastName()}`;
+
+                console.log(msg)
+            }
+
+        }
+
+        class Employee extends Hello {
+            constructor(firstName, lastName, age, designation) {
+                super(firstName, lastName);
+                this.age = age;
+                this.designation = designation;
+
+            }
+            getAge() {
+                return this.age;
+            }
+            getDesignation() {
+                return this.designation;
+            }
+
+            greet() {
+
+                let message = `Name : ${this.getFirstName()} ${this.getLastName()}
+                                Age :  ${this.getAge()}
+                            designation : ${this.getDesignation()}      `
+
+                console.log(message);
+            }
+        }
+        let employee = new Employee("aramid", "chowders", 43, "software")
+
+        employee.greet();
+    </script>
+
+
+
+
+</html>
+</body>
